@@ -76,10 +76,7 @@ public class PermissionsActivity extends BaseActivity {
 
 
 
-    @Override
-    public void accept(String msg) {
 
-    }
 
     @Override
     public void refresh(RefreshToken event) {

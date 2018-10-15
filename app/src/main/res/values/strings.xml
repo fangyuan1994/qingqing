@@ -52,7 +52,19 @@
     <string name="prompt">提示</string>
     <string name="determine">确定</string>
     <string name="other_login">您的账号已在其他设备上登录</string>
-
     <string name="wan">万</string>
     <string name="yi">亿</string>
+
+    <!--方圆增加-->
+    <string name="home">首页</string>
+    <string name="entertainment">娱乐互动</string>
+    <string name="wonderful">乐精彩</string>
+    <string name="gift_pool">礼物池</string>
+    <string name="mine">我的</string>
+    <string name="go_real_name">去实名></string>
+    <string name="merchant_entry">商家入驻</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_wonderful">我的乐精彩</string>
+
+
 </resources>

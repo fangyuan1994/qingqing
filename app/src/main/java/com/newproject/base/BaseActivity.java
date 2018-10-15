@@ -77,7 +77,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         ButterKnife.bind(this);
-//初始化沉浸式
+       //初始化沉浸式
         if (isImmersionBarEnabled()) {
             initImmersionBar();
         }
@@ -102,8 +102,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     public abstract void initView();
 
     public abstract void initData();
-
-    public abstract void accept(String msg);
 
     public abstract void refresh(RefreshToken event);
 
