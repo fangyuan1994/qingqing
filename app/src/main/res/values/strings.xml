@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">NewProject</string>
+    <!--权限-->
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+    <!--时间-->
+    <string name="just">刚刚</string>
+    <string name="minutes_ago">分钟前</string>
+    <string name="hours_before">小时前</string>
+    <string name="yesterday">昨天</string>
+
+
+    <!--注册-->
+    <string name="xin_user_register">新用户注册</string>
+    <string name="phone">手&#160;&#160;&#160;&#160;机</string>
+    <string name="zhanghao">账&#160;&#160;&#160;&#160;号</string>
+    <string name="password">密&#160;&#160;&#160;&#160;码</string>
+    <string name="input_zhanghao">请输入账号</string>
+    <string name="input_mobiephone">请输入手机号码</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="input_login_password">请输入密码</string>
+    <string name="input_register_password">请输入登录密码</string>
+    <string name="login_password">登录密码</string>
+    <string name="login">登录</string>
+    <string name="logining">登录中...</string>
+    <string name="registering">注册中...</string>
+    <string name="register">注册</string>
+    <string name="get_code">获取验证码</string>
+    <string name="repeat_input_password">请再次输入新密码</string>
+    <string name="user_xieyi">注册代表同意《红孩儿科技》用户协议</string>
+    <!--注册 登录 忘记密码-->
+    <string name="err_code">获取验证码失败</string>
+    <string name="please_input_correct_code">请输入正确的验证码</string>
+    <string name="net_err">请检查网络是否连接</string>
+    <string name="mobile_has_been_register">该手机号已被注册</string>
+    <string name="success_code">获取验证码成功</string>
+    <string name="code_err">验证码错误</string>
+    <string name="please_input_mobile_format">请输入正确的手机号格式</string>
+    <string name="input_code_format">请输入正确验证码格式</string>
+    <string name="password_format_one">密码要属于6-12位字符</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_fail">注册失败</string>
+    <string name="mobile_register">手机号已注册</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_fail">登录失败</string>
+    <string name="password_erro">密码错误</string>
+    <string name="mobile_not_register">手机号未注册</string>
+    <!---->
+    <string name="prompt">提示</string>
+    <string name="determine">确定</string>
+    <string name="other_login">您的账号已在其他设备上登录</string>
+
+    <string name="wan">万</string>
+    <string name="yi">亿</string>
+</resources>

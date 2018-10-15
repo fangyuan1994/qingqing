@@ -1,0 +1,414 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+    </style>
+
+
+    <!--去除toolbar间距-->
+    <style name="ClubToolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent
+        </item>  <!-- 设置window背景透明，也就是去边框 -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:windowAnimationStyle">@style/custom_dialog</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="my_dialog">
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent
+        </item>  <!-- 设置window背景透明，也就是去边框 -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+
+        <item name="android:windowAnimationStyle">@style/custom_dialog</item>
+    </style>
+
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="custom_dialog" parent="ActionSheetDialogAnimation">
+        <item name="android:inAnimation">@anim/zoomin</item>
+        <item name="android:outAnimation">@anim/zoomout</item>
+    </style>
+
+    <!-- dialog -->
+    <style name="s_dialog" parent="android:style/Theme.Dialog">
+        <!-- 点击空白处不消失 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!-- Dialog进入及退出动画 -->
+
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+    <style name="AnimationPreview" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/transparent</item>
+    </style>
+    <!--自定义Dialog样式-->
+    <style name="MyDialog" parent="AlertDialog.AppCompat">
+        <item name="android:background">@android:color/transparent</item>
+        //显示区域背景是否透明
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- <item name="android:backgroundDimEnabled">true</item>-->
+    </style>
+    <!-- 全透明弹框背景 -->
+    <style name="transparentBackgroundDiaolg" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="item_12_white" parent="text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="item_12_hui" parent="text">
+        <item name="android:textColor">@color/hui_89</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="item_16_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="item_18_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="item_15_A0" parent="text">
+        <item name="android:textColor">@color/a0</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="item_13_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="item_12_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="item_19_yellow" parent="text">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="item_11_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="item_12_a8" parent="text">
+        <item name="android:textColor">@color/a8</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="item_12_gray_6" parent="text">
+        <item name="android:textColor">@color/gray_6</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="item_10_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="item_10_red" parent="text">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+
+    <style name="item_10_red_qian" parent="text">
+        <item name="android:textColor">@color/red_qian</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BannerDefaultStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">121dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <!-- 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 -->
+        <!-- 开启自动轮播 -->
+        <item name="banner_pointAutoPlayAble">true</item>
+        <!-- 自动轮播的时间间隔 -->
+        <item name="banner_pointAutoPlayInterval">3000</item>
+        <!-- 指示点容器背景 -->
+        <item name="banner_pointContainerBackground">#44aaaaaa</item>
+        <!-- 指示点背景 -->
+        <item name="banner_pointDrawable">@drawable/bga_banner_selector_point_hollow</item>
+        <!-- 指示点容器左右内间距 -->
+        <item name="banner_pointContainerLeftRightPadding">10dp</item>
+        <!-- 指示点上下外间距 -->
+        <item name="banner_pointTopBottomMargin">6dp</item>
+        <!-- 指示点左右外间距 -->
+        <item name="banner_pointLeftRightMargin">3dp</item>
+        <!-- 指示器的位置 -->
+        <item name="banner_indicatorGravity">bottom|center_horizontal</item>
+        <!-- 页码切换过程的时间长度 -->
+        <item name="banner_pageChangeDuration">800</item>
+        <!-- 提示文案的文字大小 -->
+        <item name="banner_tipTextSize">10sp</item>
+        <!-- 提示文案的文字颜色 -->
+        <item name="banner_tipTextColor">@android:color/white</item>
+        <!-- 加载网络数据时覆盖在BGABanner最上层的占位图 -->
+        <item name="banner_placeholderDrawable">@mipmap/ic_launcher_round</item>
+    </style>
+
+    <style name="AutoWrapTv" parent="AutoWrap">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_btn_test</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="item_8_fd" parent="text">
+        <item name="android:textColor">#FDF8F8</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="item_10_hui" parent="text">
+        <item name="android:textColor">#4E4E4E</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="item_13_a8" parent="text">
+        <item name="android:textColor">@color/a8</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="item_14_a8" parent="text">
+        <item name="android:textColor">@color/a8</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_14_34" parent="text">
+        <item name="android:textColor">@color/gray_34</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="item_16_a8" parent="text">
+        <item name="android:textColor">@color/a8</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="item_13_content" parent="text">
+
+        <item name="android:textColor">@color/content</item>
+        <item name="android:textSize">13sp</item>
+
+    </style>
+
+    <style name="item_16_yellow" parent="text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FED100</item>
+    </style>
+
+    <style name="item_17_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="item_21_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="item_17_yellow" parent="text">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="item_17_a8" parent="text">
+        <item name="android:textColor">@color/a8</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="item_14_black" parent="text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_14_hui_68" parent="text">
+        <item name="android:textColor">@color/hui_68</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_11_hui_68" parent="text">
+        <item name="android:textColor">@color/hui_68</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+
+    <style name="item_14_red" parent="text">
+        <item name="android:textColor">@color/da_hong</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_17_red" parent="text">
+        <item name="android:textColor">@color/honghong</item>
+        <item name="android:textSize">17sp</item>
+
+    </style>
+
+    <style name="item_17_white" parent="text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+
+    </style>
+
+    <declare-styleable name="BGABanner">
+        <!-- 指示点容器背景 -->
+        <attr name="banner_pointContainerBackground" format="reference|color" />
+        <!-- 指示点背景 -->
+        <attr name="banner_pointDrawable" format="reference" />
+        <!-- 指示点容器左右内间距 -->
+        <attr name="banner_pointContainerLeftRightPadding" format="dimension" />
+        <!-- 指示点上下外间距 -->
+        <attr name="banner_pointTopBottomMargin" format="dimension" />
+        <!-- 指示点左右外间距 -->
+        <attr name="banner_pointLeftRightMargin" format="dimension" />
+        <!-- 指示器的位置 -->
+        <attr name="banner_indicatorGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_horizontal" value="0x01" />
+        </attr>
+        <!-- 是否开启自动轮播 -->
+        <attr name="banner_pointAutoPlayAble" format="boolean" />
+        <!-- 自动轮播的时间间隔 -->
+        <attr name="banner_pointAutoPlayInterval" format="integer" />
+        <!-- 页码切换过程的时间长度 -->
+        <attr name="banner_pageChangeDuration" format="integer" />
+        <!-- 页面切换的动画效果 -->
+        <attr name="banner_transitionEffect" format="enum">
+            <enum name="defaultEffect" value="0" />
+            <enum name="alpha" value="1" />
+            <enum name="rotate" value="2" />
+            <enum name="cube" value="3" />
+            <enum name="flip" value="4" />
+            <enum name="accordion" value="5" />
+            <enum name="zoomFade" value="6" />
+            <enum name="fade" value="7" />
+            <enum name="zoomCenter" value="8" />
+            <enum name="zoomStack" value="9" />
+            <enum name="stack" value="10" />
+            <enum name="depth" value="11" />
+            <enum name="zoom" value="12" />
+        </attr>
+        <!-- 提示文案的文字颜色 -->
+        <attr name="banner_tipTextColor" format="reference|color" />
+        <!-- 提示文案的文字大小 -->
+        <attr name="banner_tipTextSize" format="dimension" />
+        <!-- 加载网络数据时覆盖在 BGABanner 最上层的占位图 -->
+        <attr name="banner_placeholderDrawable" format="reference" />
+        <!-- 是否是数字指示器 -->
+        <attr name="banner_isNumberIndicator" format="boolean" />
+        <!-- 数字指示器文字颜色 -->
+        <attr name="banner_numberIndicatorTextColor" format="reference|color" />
+        <!-- 数字指示器文字大小 -->
+        <attr name="banner_numberIndicatorTextSize" format="dimension" />
+        <!-- 数字指示器背景 -->
+        <attr name="banner_numberIndicatorBackground" format="reference" />
+        <!-- 当只有一页数据时是否显示指示器，默认值为 false -->
+        <attr name="banner_isNeedShowIndicatorOnOnlyOnePage" format="boolean" />
+        <!-- 自动轮播区域距离 BGABanner 底部的距离，用于使指示器区域与自动轮播区域不重叠 -->
+        <attr name="banner_contentBottomMargin" format="dimension" />
+        <!-- 宽高比例，如yi大于 0，则会根据宽度来计算高度，否则使用 android:layout_height 指定的高度 -->
+        <attr name="banner_aspectRatio" format="float" />
+        <!-- 占位图和资源图片缩放模式 -->
+        <attr name="android:scaleType" />
+    </declare-styleable>
+    <color name="hui_89">#898484</color>
+    <color name="content">#0C0C0C</color>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="dialogAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_push_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_push_out</item>
+    </style>
+
+
+</resources>
